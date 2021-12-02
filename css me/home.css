@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #EFEFEF;
+  font-family: 'SF Display', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-family: 'Nooa Semiserif', sans-serif;
+  font-size: 3em;
+  color: #464646;
+}
+
+.header h1 span {
+  font-size: 1.2em;
+}
+
+.header p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #464646;
+}
+
+.header p img {
+  width: 1.2em;
+}
+
+/* Story */
+.story {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  color: #464646;
+}
+
+.story .judul h1{
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.story .deskripsi {
+  margin-top: 25px;
+}
+
+.story .deskripsi p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.story .button {
+  margin-top: 40px;
+}
+
+.story .button a {
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #464646;
+  position: relative;
+}
+
+.story .button a::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  background-color: #CCAD76;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.story .button a:hover::after {
+  width: 10px;
+  height: 40px;
+}
+
+/* Elemantor Toggle Widget */
+.grup-dropdown {
+  margin-top: 25px;
+}
+
+.dropdown-container {
+  display: none;
+  width: 75%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.dropdown-content {
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #EFEFEF;
+  border-color: #CCAD76;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.dropdown-button {
+  background-color: #EFEFEF;
+  border-color: #CCAD76;
+  border-style: solid;
+  border-width: 4px;
+  width: 75%;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 5px 0;
+  position: relative;
+}
+
+.dropdown-button span {
+  padding: 10px;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.dropdown-content p {
+  font-size: 18px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Furnishing */
+.furnishing {
+  display: flex;
+  justify-content: center;
+  margin-top: 167px;
+  color: #464646;
+}
+
+.furnishing .gambar-furnishing {
+  text-align: center;
+}
+
+.furnishing .judul-furnishing h1 {
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.furnishing .judul-furnishing h1 span {
+  color: black;
+  opacity: 5%;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 30px;
+}
+
+.furnishing .judul-furnishing p {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/* Product */
+.product {
+  text-align: center;
+  margin-top: 167px;
+  color: #464646;
+}
+
+.product h1 {
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+}
+
+.product img {
+  margin-bottom: 50px;
+}
+
+.product a {
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #464646;
+  position: relative;
+}
+
+.product a::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  bottom: -6px;
+  right: -5px;
+  background-color: #CCAD76;
+  z-index: -1;
+  transition: all 1s;
+}
+
+.product a:hover::after {
+  width: 10px;
+  height: 40px;
+}
+
+/* Button Whatsapp */
+.wafixed {
+  position: fixed;
+  z-index: 999;
+  right: 30px;
+  bottom: 30px;
+}
+
+.wafixed img {
+  width: 150px;
+  height: auto;
+}
+
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+
+
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+
+  /* Header */
+  .header {
+    height: 600px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-family: 'Nooa Semiserif', sans-serif;
+    font-size: 1.5em;
+    color: #464646;
+  }
+
+  .header h1 span {
+    font-size: 1.2em;
+  }
+
+  .header p {
+    font-size: 15px;
+    color: #464646;
+  }
+
+  .header p img {
+    width: 1.2em;
+  }
+
+  /* Story */
+  .story {
+    margin-top: 100px;
+    color: #464646;
+  }
+
+  .story .judul h1{
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .story .deskripsi p {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  .story .button a {
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #464646;
+    position: relative;
+  }
+
+  .story .button a::after {
+    bottom: -10px;
+  }
+
+  .story .button {
+    margin-bottom: 30px;
+  }
+
+  /* Elemantor Toggle Widget */
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .dropdown-button {
+    width: 100%;
+  }
+
+  .dropdown-button span {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+  .dropdown-content p {
+    font-size: 15px;
+  }
+
+  /* Furnishing */
+  .furnishing {
+    margin-top: 120px;
+  }
+
+  .furnishing .judul-furnishing {
+    margin-top: 40px;  
+  }
+
+  .furnishing .judul-furnishing h1 {
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .furnishing .judul-furnishing p {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  .furnishing .judul-furnishing h1 span {
+    display: none;
+  }
+
+  /* Product */
+  .product {
+    margin-top: 120px;
+  }
+
+  .product img {
+    width: 120px;
+    height: auto;
+  }
+
+  .product a {
+    font-size: 15px;
+  }
+
+  .product a::after {
+    width: 60px;
+    bottom: -10px;
+    right: -5px;
+  }
+  
+  .product a:hover::after {
+    width: 10px;
+    height: 40px;
+  }
+
+  /* Button Whatsapp */
+  .wafixed {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    z-index: 999;
+  }
+  
+  .wafixed img {
+    width: 120px;
+    height: auto;
+  }
+}

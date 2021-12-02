@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css me/contact us.css">
+  <link rel="stylesheet" href="../css me/navbar.footer.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../image/Tulisan Logo Perusahaan 2.svg" alt="Kitamadi">
+        </a>
+      </div>
+  
+      <div class="slogan">
+        <h4><span>#10%</span> for kids without parents</h4>
+      </div>
+  
+      <ul>
+        <li><a href="../index.html" class="">Home</a></li>
+        <li><a href="about us.html" class="">About Us</a></li>
+        <li><a href="product.html" class="">Product</a></li>
+        <li><a href="contact us.html" class="">Contact Us</a></li>
+      </ul>
+  
+      <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <P>PT. Kitamadi</P>
+      <h1>PLEASE CONTACT US<br>
+        FOR FURTHER BUSINESS.
+      </h1>
+    </div>    
+  </div>
+
+  <!-- Inquiry -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 section-left">
+        <h1 class="entry-title">Get In Touch With Us</h1>
+        <p class="entry-content">
+          Address <br>
+          Lorem ipsum dolor sit amet. <br>
+          Lorem, ipsum dolor. <br>
+          Lorem ipsum dolor sit. <br>
+          Lorem, ipsum.
+        </p>
+        <p class="entry-content">
+          Phone Number : <br>
+          - +6285388584649
+        </p>
+        <p class="entry-content">
+          E-mail : <br>
+          - info@kitamadi.com
+        </p>
+      </div>
+      <div class="col-12 col-md-6 section-right">
+        <h1 class="entry-title">Contact Us</h1>
+        <div class="entry-content">
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Thank You!</strong> We have received your message. please wait for us to reply.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form name="contact-form" action="">
+            <div class="contact-us">
+              <div class="control-grup form-grup">
+                <div class="controls">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your Full Name *" required>
+                </div>
+              </div>
+              <div class="control-grup form-grup">
+                <div class="controls">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail Address *" required>
+                </div>
+              </div>
+              <div class="control-grup form-grup">
+                <div class="controls">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject">
+                </div>
+              </div>
+              <div class="control-grup form-grup">
+                <div class="controls">
+                  <textarea class="form-control" name="message" id="message" cols="0" rows="0" placeholder="Message *" required></textarea>
+                </div>
+              </div>
+              <div class="control-grup form-grup">
+                <div class="controls">
+                  <button type="submit" class="btn btn-contact-us">Send Message</button>
+
+                  <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="logo-footer">
+        <img src="../image/Logo Perusahaan 2.png" alt="Logo">
+        <img src="../image/Tulisan Logo Perusahaan 2.svg" alt="Kitamadi">
+      </div>
+      <div class="panel-follow">
+        <h4>Follow Us</h4>
+        <div class="foto-panel-follow">
+          <a href="https://web.facebook.com/Kitamadi-ID-103381135523482" target="_blank"><img src="../image/follow facebook.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/kitamadi.id/" target="_blank"><img src="../image/follow instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+      <hr color="#464646" size="5px" style="margin: 35px 0;">
+      <h4>© 2021 Kitamadi</h4>
+    </div>
+  </footer>
+
+
+
+  
+  <!-- Script -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery-3.5.1.min.js"></script>
+  <!-- Script Navbar -->
+  <script src="../js me/script.toggle.js"></script>
+  <!-- script inquiry -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwibKLfVFx6sfyO8J-LH9lIV0d79NG3yisz40atGuclIFvIVWpTrLDHa_4CKk3Ml7AIJw/exec'
+    const form = document.forms['contact-form']
+
+    const btnContactUs = document.querySelector('.btn-contact-us')
+    const btnLoading = document.querySelector('.btn-loading')
+    const myAlert = document.querySelector('.my-alert')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      btnLoading.classList.toggle('d-none')
+      btnContactUs.classList.toggle('d-none')
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          // button kirim akan hilang ketika di klik submit
+          // button loading akan muncul ketika di klik submit
+          btnLoading.classList.toggle('d-none')
+          btnContactUs.classList.toggle('d-none')
+          // alert akan muncuk ketika sukses mengirim
+          myAlert.classList.toggle('d-none')
+          // untuk reset form ketika sukses mengirim
+          form.reset()
+          console.log('Success!', response)
+          })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+</body>
+</html>

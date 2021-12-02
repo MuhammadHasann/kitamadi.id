@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #EFEFEF;
+  font-family: 'SF Display', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-family: 'Nooa Semiserif', sans-serif;
+  font-size: 3em;
+  color: #464646;
+}
+
+.header p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #464646;
+}
+
+/* About */
+.about {
+  display: flex;
+  justify-content: center;
+  margin-top: 167px;
+  color: #464646;
+}
+
+.about .gambar-about {
+  text-align: center;
+}
+
+.about .detail-about h1 {
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.about .detail-about p {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/* Socialization */
+.socialization {
+  display: flex;
+  content: '';
+  background-image: url(../image/bg\ about\ socialization.svg);
+  background-size: cover;
+  height: 335px;
+  margin-top: 167px;
+  align-items: center;
+}
+
+.socialization h1 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #464646;
+}
+
+.socialization p {
+  margin-top: 25px;
+  font-size: 18px;
+  text-align: center;
+  color: #464646;
+}
+
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+
+  /* Header */
+  .header {
+    height: 600px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-family: 'Nooa Semiserif', sans-serif;
+    font-size: 1.5em;
+    color: #464646;
+  }
+
+  .header p {
+    font-size: 15px;
+    color: #464646;
+  }
+
+  /* About */
+  .about {
+    margin-top: 120px;
+  }
+
+  .about .detail-about {
+    margin-top: 40px;  
+  }
+
+  .about .detail-about h1 {
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .about .detail-about p {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  /* Socialization */
+  .socialization {
+    margin-top: 120px;
+  }
+
+  .socialization h1 {
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+  }
+
+  .socialization p {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+}
